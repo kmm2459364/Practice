@@ -21,9 +21,13 @@ int main()
 int MaxOfThree(int a, int b, int c)
 {
     // ここに3値の最大値を算定するコードを書いてください。
+    printf("aの値:"); scanf_s("%d", &a);
+    printf("bの値:"); scanf_s("%d", &b);
+    printf("cの値:"); scanf_s("%d", &c);
     int max = a;
     if (b > max)max = b;
     if (c > max)max = c;
 
-    printf("最大値は%dです。\n",max );
+    printf("最大値は%dです。\n", max);
+    return 0;
 }
