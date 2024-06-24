@@ -42,8 +42,6 @@ int main()
 	}
 	return 0;
 }
-const char* strFrom = getPollName(from);
-const char* strTo = getPollName(to);
 
 void move(int no, POS from, POS to)
 {
@@ -52,6 +50,20 @@ void move(int no, POS from, POS to)
 		move(no - 1, from, tmp);
 	}
 	printf("‰~”Õ[%d]‚ð %sŽ²‚©‚ç %sŽ²‚ÖˆÚ“®\n", no, strFrom, strTo);
+	const char* strFrom = getPollName(from);
+	const char* strTo = getPollName(to);
+	char* getPollName(POS poll)
+		if (poll == A)
+		{
+			return "A";
+		}
+		else if (poll == B) {
+			return "B";
+		}
+		else
+		{
+			return "C";
+		}
 	if (no > 1) {
 		move(no - 1, tmp, to);
 	}
